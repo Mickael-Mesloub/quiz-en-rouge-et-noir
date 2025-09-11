@@ -3,6 +3,14 @@
 /* ---- Customize Tailwind dark mode ----- */
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "Fredoka-Regular";
+  src: url("/fonts/Fredoka-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ------ Customize Tailwind theme ------- */
 @theme {
   --color-primary-100: rgba(var(--primary-100));
@@ -18,6 +26,7 @@
   --color-accent-600: rgba(var(--accent-600));
   --color-app-base-bg: rgba(var(--app-base-bg));
   --color-app-gradient-bg: var(--app-gradient-bg);
+  --font-main: "Fredoka-Regular", sans-serif;
 }
 
 /* ------------ CSS variables ------------ */
@@ -48,6 +57,7 @@
 html {
   background: var(--app-gradient-bg);
   color: rgba(var(--primary-500));
+  font-family: var(--font-main);
 }
 
 .dark {
