@@ -25,7 +25,7 @@ export default function PageLayout() {
 }
 
 function PageWrapper({ children }: HTMLAttributes<HTMLDivElement>) {
-  return <div className="h-dvh">{children}</div>
+  return <div className="min-h-dvh">{children}</div>
 }
 
 function Main({ children }: HTMLAttributes<HTMLDivElement>) {

@@ -1,95 +1,58 @@
 import { twMerge } from "tailwind-merge"
 import { Button } from "@/shared/components/ui"
 import { Section } from "@/shared/layouts"
+import { FaArrowRight } from "react-icons/fa"
+import Heading2 from "@/shared/components/ui/Heading/Heading2"
+import Text from "@/shared/components/ui/Text"
 
 export default function TheBasics() {
+  // TODO: add handleClick
+
   return (
     <Section>
-      <Heading2>@TomIsLoading</Heading2>
+      <Heading2>Comment on joue ?</Heading2>
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ex
-        expedita ipsum est quae ab officiis, similique ullam cupiditate
-        doloremque odio. Dolorem ad consectetur debitis illo iusto quod minus
-        labore.
+        {
+          "Vous allez devoir répondre à une série de questions sur des thèmes variés (Pop culture/culture générale, musique, cinéma...)"
+        }
       </Text>
-      <ActionList className="divide-accent border-accent flex-wrap justify-between divide-x rounded-xl border">
-        <ActionItem>
-          <ActionButton className="bg-accent-600 hover:bg-accent-500 text-neutral-100">
-            Subscribe
-          </ActionButton>
-        </ActionItem>
-        <ActionItem>
-          <ActionButton className="text-accent-500 hover:text-primary-500 hover:bg-secondary-500 active:bg-indigo-50">
-            Notification
-          </ActionButton>
-        </ActionItem>
-      </ActionList>
+      <Text>
+        {
+          "Pour chaque question, vous disposerez de 15s pour écrire votre réponse. Soyez rapides 😉 !"
+        }
+      </Text>
+      <Text>
+        {
+          "Après chaque question, on regarde si vous avez la bonne réponse et on attribue les points. Chaque bonne réponse rapporte +1 point."
+        }
+      </Text>
+      <Text>
+        {
+          "À la fin du quiz, le joueur ayant le plus de points remporte la partie 🏆 Alors, prêts à relever le défi et ATOMISER vos adversaires ? 💥"
+        }
+      </Text>
+      <StartQuizzBtn>{"Zé parti let's gooo"}</StartQuizzBtn>
     </Section>
   )
 }
 
-function Heading2({
-  children,
-  className = "",
-  ...restProps
-}: React.HTMLProps<HTMLHeadingElement>) {
-  const baseStyle = "text-xl font-bold"
-  return (
-    <h2 className={twMerge(baseStyle, className)} {...restProps}>
-      {children}
-    </h2>
-  )
-}
-
-function Text({
-  children,
-  className = "",
-  ...restProps
-}: React.HTMLProps<HTMLParagraphElement>) {
-  const baseStyle = "leading-relaxed"
-  return (
-    <p className={twMerge(baseStyle, className)} {...restProps}>
-      {children}
-    </p>
-  )
-}
-
-function ActionList({
-  children,
-  className = "",
-  ...restProps
-}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>) {
-  const baseStyle =
-    "divide-accent-500 border-accent-500 flex flex-wrap justify-between divide-x overflow-hidden rounded-xl border"
-  return (
-    <ul className={twMerge(baseStyle, className)} {...restProps}>
-      {children}
-    </ul>
-  )
-}
-
-function ActionItem({
-  children,
-  className = "",
-  ...restProps
-}: React.HTMLProps<HTMLLIElement>) {
-  const baseStyle = "flex-1"
-  return (
-    <li className={twMerge(baseStyle, className)} {...restProps}>
-      {children}
-    </li>
-  )
-}
-
-function ActionButton({
+function StartQuizzBtn({
   children,
   className = "",
   ...restProps
 }: React.ComponentProps<typeof Button>) {
-  const baseStyle = "p-4 transition-all duration-800 ease w-full rounded-none"
+  const baseStyle =
+    "group/start-quizz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center"
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
+      <span className="text-accent-50 group-hover/start-quizz:text-accent-600 mt-1 transition-all duration-500">
+        <FaArrowRight
+          focusable={false}
+          aria-hidden={true}
+          className="text-inherit"
+        />
+      </span>
     </Button>
   )
 }

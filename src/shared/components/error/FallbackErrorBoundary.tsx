@@ -112,7 +112,7 @@ function BaseContent({
 function Header(props: React.HTMLAttributes<HTMLSpanElement>) {
   return (
     <span
-      className="text-sm tracking-[.25em] text-slate-500 uppercase md:tracking-[.5em]"
+      className="tracking-[.25em]text-accent-50 text-sm uppercase md:tracking-[.5em]"
       {...props}
     />
   )
@@ -121,7 +121,7 @@ function Header(props: React.HTMLAttributes<HTMLSpanElement>) {
 function Heading1(props: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h1
-      className="font-sans text-2xl font-black text-slate-500 lg:text-4xl"
+      className="font-blacktext-accent-50 font-sans text-2xl lg:text-4xl"
       {...props}
     />
   )
@@ -148,7 +148,7 @@ function Text({
   className,
   ...restProps
 }: React.HTMLAttributes<HTMLPreElement>) {
-  return <pre className={twMerge("text-slate-500", className)} {...restProps} />
+  return <pre className={twMerge("text-accent-50", className)} {...restProps} />
 }
 
 function ArrowRightIcon() {
@@ -171,5 +171,10 @@ function ArrowRightIcon() {
 }
 
 function Button(props: React.ComponentProps<typeof BaseButton>) {
-  return <BaseButton className="bg-accent-500 w-fit" {...props} />
+  return (
+    <BaseButton
+      className="hover:bg-accent-50 hover:text-accent-500 w-fit bg-transparent transition-all duration-300"
+      {...props}
+    />
+  )
 }
