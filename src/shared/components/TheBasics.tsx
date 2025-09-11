@@ -4,9 +4,14 @@ import { Section } from "@/shared/layouts";
 import { FaArrowRight } from "react-icons/fa";
 import Heading2 from "@/shared/components/ui/Heading/Heading2";
 import Text from "@/shared/components/ui/Text";
+import { useNavigate } from "react-router-dom";
 
 export default function TheBasics() {
-  // TODO: add handleClick
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/quizz");
+  };
 
   return (
     <Section>
@@ -31,7 +36,9 @@ export default function TheBasics() {
           "À la fin du quiz, le joueur ayant le plus de points remporte la partie 🏆 Alors, prêts à relever le défi et ATOMISER vos adversaires ? 💥"
         }
       </Text>
-      <StartQuizzBtn>{"Zé parti let's gooo"}</StartQuizzBtn>
+      <StartQuizzBtn onClick={handleClick}>
+        {"Zé parti let's gooo"}
+      </StartQuizzBtn>
     </Section>
   );
 }
