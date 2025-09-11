@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 import { FallbackErrorBoundary } from "@/shared/components/error"
 import { Spinner } from "@/shared/components/ui"
+import QuizzPage from "@/shared/pages/QuizzPage"
 
 /* 
   Lazy load not initially shown pages to enhance application rendering performance.
@@ -53,6 +54,10 @@ const publicRoutes: RouteObject[] = [
       {
         index: true,
         element: <LandingPage />,
+      },
+      {
+        path: "/quizz",
+        element: <QuizzPage />,
       },
     ],
   },
