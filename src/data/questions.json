@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "category": "Jeux vidéo",
+    "question": "Quel est le nom du plombier en salopette bleue et casquette rouge, mascotte de Nintendo ?",
+    "answer": "Mario",
+    "hint": "Frère de Luigi"
+  },
+  {
+    "id": 2,
+    "category": "Jeux vidéo",
+    "question": "Dans Pokémon, quel est le dresseur légendaire, toujours représenté avec une casquette rouge et une veste noire ?",
+    "answer": "Red",
+    "hint": "Rival de Blue"
+  },
+  {
+    "id": 3,
+    "category": "Jeux vidéo",
+    "question": "Dans quel jeu incarne-t-on Dante, un chasseur de démons vêtu d’un long manteau rouge ?",
+    "answer": "Devil May Cry",
+    "hint": "Saga de Capcom"
+  },
+  {
+    "id": 4,
+    "category": "Musique",
+    "question": "Quel titre culte de Jeanne Mas contient déjà 'Rouge et noir' dans son nom ?",
+    "answer": "En rouge et noir",
+    "hint": "1986"
+  },
+  {
+    "id": 5,
+    "category": "Musique",
+    "question": "Quel groupe de rock australien a sorti l’album 'Back in Black' en 1980 ?",
+    "answer": "AC/DC",
+    "hint": "Nom avec un éclair"
+  },
+  {
+    "id": 6,
+    "category": "Musique",
+    "question": "Je suis une chanson des Rolling Stones, sortie en 1966 : 'Paint It ...'",
+    "answer": "Black",
+    "hint": "Couleur sombre"
+  },
+  {
+    "id": 7,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Je suis le super-héros Marvel vêtu de rouge et noir, célèbre pour mon humour et mes répliques trash.",
+    "answer": "Deadpool",
+    "hint": "Incarné par Ryan Reynolds"
+  },
+  {
+    "id": 8,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans Star Wars, comment s’appelle le Seigneur Sith à la double lame rouge ?",
+    "answer": "Dark Maul",
+    "hint": "Visage tatoué de noir et rouge"
+  },
+  {
+    "id": 9,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans l’univers Pixar, quelle princesse à la chevelure flamboyante manie l’arc avec adresse ?",
+    "answer": "Mérida (Rebelle/Brave)",
+    "hint": "Écosse"
+  },
+  {
+    "id": 10,
+    "category": "Culture générale & Pop culture",
+    "question": "Quel est le nom du jeu de cartes comprenant les fameux +4 briseurs d'amitiés ?",
+    "answer": "UNO",
+    "hint": "1, en espagnol"
+  },
+  {
+    "id": 11,
+    "category": "Culture générale & Pop culture",
+    "question": "Dans l’univers d’Harry Potter, quelle maison a pour emblème un lion rouge et or ?",
+    "answer": "Gryffondor",
+    "hint": "La maison de Harry"
+  },
+  {
+    "id": 12,
+    "category": "Culture générale & Pop culture",
+    "question": "Dans les jeux d’échecs, quelles pièces affrontent les blanches ?",
+    "answer": "Les pièces noires",
+    "hint": "Côté opposé aux blanches"
+  }
+]
