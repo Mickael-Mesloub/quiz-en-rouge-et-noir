@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge"
+import { twMerge } from "tailwind-merge";
 
 export default function Button({
   children,
@@ -6,7 +6,7 @@ export default function Button({
   ...restProps
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const baseStyle =
-    "flex cursor-pointer items-center gap-2 rounded-xl px-4 py-3 font-bold text-primary-50"
+    "flex cursor-pointer items-center gap-2 rounded-xl px-4 py-3 font-bold text-primary-50";
   return (
     <button
       type="button"
@@ -15,5 +15,5 @@ export default function Button({
     >
       {children}
     </button>
-  )
+  );
 }

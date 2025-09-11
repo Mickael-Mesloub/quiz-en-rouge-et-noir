@@ -1,13 +1,13 @@
-import { lazy, Suspense } from "react"
-import { ErrorBoundary } from "react-error-boundary"
+import { lazy, Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import {
   createBrowserRouter,
   RouteObject,
   RouterProvider,
-} from "react-router-dom"
-import { FallbackErrorBoundary } from "@/shared/components/error"
-import { Spinner } from "@/shared/components/ui"
-import QuizzPage from "@/shared/pages/QuizzPage"
+} from "react-router-dom";
+import { FallbackErrorBoundary } from "@/shared/components/error";
+import { Spinner } from "@/shared/components/ui";
+import QuizzPage from "@/shared/pages/QuizzPage";
 
 /* 
   Lazy load not initially shown pages to enhance application rendering performance.
@@ -30,14 +30,14 @@ import QuizzPage from "@/shared/pages/QuizzPage"
         )
     ℹ️ This is not required for children routes since they are already wrapper in `Suspense` from their parent. Similarly, a child route content is already wrapper in `Suspense` from `PageLayout`.
 */
-const LandingPage = lazy(() => import("@/shared/pages/LandingPage"))
-const NotFoundPage = lazy(() => import("@/shared/pages/NotFoundPage"))
-const PageLayout = lazy(() => import("@/shared/layouts/PageLayout"))
+const LandingPage = lazy(() => import("@/shared/pages/LandingPage"));
+const NotFoundPage = lazy(() => import("@/shared/pages/NotFoundPage"));
+const PageLayout = lazy(() => import("@/shared/layouts/PageLayout"));
 
 export default function AppRoutes() {
-  const routes = publicRoutes
-  const router = createBrowserRouter(routes)
-  return <RouterProvider router={router} />
+  const routes = publicRoutes;
+  const router = createBrowserRouter(routes);
+  return <RouterProvider router={router} />;
 }
 
 const publicRoutes: RouteObject[] = [
@@ -66,4 +66,4 @@ const publicRoutes: RouteObject[] = [
     path: "*",
     element: <NotFoundPage />,
   },
-]
+];

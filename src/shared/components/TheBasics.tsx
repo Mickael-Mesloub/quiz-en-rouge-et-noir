@@ -1,9 +1,9 @@
-import { twMerge } from "tailwind-merge"
-import { Button } from "@/shared/components/ui"
-import { Section } from "@/shared/layouts"
-import { FaArrowRight } from "react-icons/fa"
-import Heading2 from "@/shared/components/ui/Heading/Heading2"
-import Text from "@/shared/components/ui/Text"
+import { twMerge } from "tailwind-merge";
+import { Button } from "@/shared/components/ui";
+import { Section } from "@/shared/layouts";
+import { FaArrowRight } from "react-icons/fa";
+import Heading2 from "@/shared/components/ui/Heading/Heading2";
+import Text from "@/shared/components/ui/Text";
 
 export default function TheBasics() {
   // TODO: add handleClick
@@ -33,7 +33,7 @@ export default function TheBasics() {
       </Text>
       <StartQuizzBtn>{"Zé parti let's gooo"}</StartQuizzBtn>
     </Section>
-  )
+  );
 }
 
 function StartQuizzBtn({
@@ -42,7 +42,7 @@ function StartQuizzBtn({
   ...restProps
 }: React.ComponentProps<typeof Button>) {
   const baseStyle =
-    "group/start-quizz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center"
+    "group/start-quizz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center";
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
@@ -54,5 +54,5 @@ function StartQuizzBtn({
         />
       </span>
     </Button>
-  )
+  );
 }

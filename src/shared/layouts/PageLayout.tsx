@@ -1,9 +1,9 @@
-import { HTMLAttributes, Suspense } from "react"
-import { ErrorBoundary } from "react-error-boundary"
-import { Outlet } from "react-router-dom"
-import { Header } from "@/shared/components"
-import { FallbackErrorBoundary } from "@/shared/components/error"
-import { Spinner } from "@/shared/components/ui"
+import { HTMLAttributes, Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { Outlet } from "react-router-dom";
+import { Header } from "@/shared/components";
+import { FallbackErrorBoundary } from "@/shared/components/error";
+import { Spinner } from "@/shared/components/ui";
 
 export default function PageLayout() {
   return (
@@ -21,13 +21,13 @@ export default function PageLayout() {
         </Main>
       </PageWrapper>
     </ErrorBoundary>
-  )
+  );
 }
 
 function PageWrapper({ children }: HTMLAttributes<HTMLDivElement>) {
-  return <div className="min-h-dvh">{children}</div>
+  return <div className="min-h-dvh">{children}</div>;
 }
 
 function Main({ children }: HTMLAttributes<HTMLDivElement>) {
-  return <main className="h-full w-full overflow-hidden">{children}</main>
+  return <main className="h-full w-full overflow-hidden">{children}</main>;
 }

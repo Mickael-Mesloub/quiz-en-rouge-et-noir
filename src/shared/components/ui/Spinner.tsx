@@ -1,17 +1,17 @@
-import { Fragment } from "react/jsx-runtime"
-import { twMerge } from "tailwind-merge"
+import { Fragment } from "react/jsx-runtime";
+import { twMerge } from "tailwind-merge";
 
 type SpinnerProps = React.HTMLAttributes<HTMLDivElement> & {
-  align?: AlignVariant
-  height?: HeightVariant
-  size?: SpinnerSize
-}
+  align?: AlignVariant;
+  height?: HeightVariant;
+  size?: SpinnerSize;
+};
 
-type AlignVariant = "start" | "center" | "end"
+type AlignVariant = "start" | "center" | "end";
 
-type HeightVariant = "base" | "fullPage" | "fullHeight"
+type HeightVariant = "base" | "fullPage" | "fullHeight";
 
-type SpinnerSize = "2" | "4" | "6" | "8" | "10" | "12"
+type SpinnerSize = "2" | "4" | "6" | "8" | "10" | "12";
 
 export default function Spinner({
   className = "",
@@ -31,11 +31,11 @@ export default function Spinner({
     >
       <Loader className={twMerge(BASE_STYLE, SIZE[size])} />
     </LoaderWrapper>
-  )
+  );
 }
 
 function LoaderWrapper(props: React.HTMLAttributes<HTMLDivElement>) {
-  return <div {...props} />
+  return <div {...props} />;
 }
 
 function Loader(props: React.HTMLAttributes<HTMLOrSVGElement>) {
@@ -59,10 +59,10 @@ function Loader(props: React.HTMLAttributes<HTMLOrSVGElement>) {
       </svg>
       <span className="sr-only">Loading...</span>
     </Fragment>
-  )
+  );
 }
 
-const BASE_STYLE = "aspect-square animate-spin fill-indigo-600 text-slate-300"
+const BASE_STYLE = "aspect-square animate-spin fill-indigo-600 text-slate-300";
 
 const SIZE = {
   "2": "h-2",
@@ -71,16 +71,16 @@ const SIZE = {
   "8": "h-8",
   "10": "h-10",
   "12": "h-12",
-}
+};
 
 const HEIGHT = {
   base: "h-fit",
   fullPage: "h-screen",
   fullHeight: "h-full",
-}
+};
 
 const ALIGN = {
   start: "justify-start",
   center: "justify-center",
   end: "justify-end",
-}
+};
