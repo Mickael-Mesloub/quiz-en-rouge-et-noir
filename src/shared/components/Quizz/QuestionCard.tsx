@@ -4,6 +4,8 @@ import QuestionCardContent from "@/shared/components/Quizz/QuestionCardContent";
 import { HEADER_HEIGHT } from "@/shared/constants/layout";
 import useQuizz from "@/shared/hooks/useQuizz";
 import { Question } from "@/shared/types";
+import ShowAnswerModal from "@/shared/components/Modal/ShowAnswerModal";
+import useManageShowAnswerModal from "@/shared/hooks/useManageShowAnswerModal";
 
 interface QuestionCardProps {
   questions: Question[];
@@ -14,11 +16,21 @@ const containerHeight: number = window.innerHeight - HEADER_HEIGHT;
 export default function QuestionCard({ questions }: QuestionCardProps) {
   const {
     currentQuestionIndex,
-    handleClickNextQuestion,
-    handleClickPrevQuestion,
     isFirstQuestion,
     isLastQuestion,
+    handleClickPrevQuestion,
+    handleClickNextQuestion,
   } = useQuizz({ questions });
+
+  const {
+    isShowAnswerModalOpen,
+    openConfirmationModal,
+    closeConfirmationModal,
+  } = useManageShowAnswerModal();
+
+  const handleConfirmBtnAction = () => {
+    handleClickNextQuestion();
+  };
 
   return (
     <div
@@ -31,10 +43,17 @@ export default function QuestionCard({ questions }: QuestionCardProps) {
       />
       <QuestionCardContent question={questions[currentQuestionIndex]} />
       <QuestionCardActions
-        handleClickNextQuestion={handleClickNextQuestion}
-        handleClickPrevQuestion={handleClickPrevQuestion}
         isFirstQuestion={isFirstQuestion}
         isLastQuestion={isLastQuestion}
+        handleClickPrevQuestion={handleClickPrevQuestion}
+        handleClickNextQuestion={handleClickNextQuestion}
+        openModal={openConfirmationModal}
+      />
+      <ShowAnswerModal
+        isOpen={isShowAnswerModalOpen}
+        onClose={closeConfirmationModal}
+        onConfirm={handleConfirmBtnAction}
+        answer={questions[currentQuestionIndex].answer}
       />
     </div>
   );
