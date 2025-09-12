@@ -1,18 +1,18 @@
-import { isRouteErrorResponse, Link, useRouteError } from "react-router-dom"
+import { isRouteErrorResponse, Link, useRouteError } from "react-router-dom";
 
 export default function ErrorRouteElement() {
-  const error = useRouteError()
+  const error = useRouteError();
 
-  let errorMessage = "Unknown error"
+  let errorMessage = "Unknown error";
 
   if (isRouteErrorResponse(error)) {
-    errorMessage = error.statusText
+    errorMessage = error.statusText;
   }
   if (error instanceof Error) {
-    errorMessage = error.message
+    errorMessage = error.message;
   }
   if (typeof error === "string") {
-    errorMessage = error
+    errorMessage = error;
   }
 
   return (
@@ -35,5 +35,5 @@ export default function ErrorRouteElement() {
         />
       </div>
     </div>
-  )
+  );
 }
