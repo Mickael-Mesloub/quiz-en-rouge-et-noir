@@ -26,6 +26,7 @@
   --color-accent-600: rgba(var(--accent-600));
   --color-app-base-bg: rgba(var(--app-base-bg));
   --color-app-gradient-bg: var(--app-gradient-bg);
+
   --font-main: "Fredoka-Regular", sans-serif;
 }
 
