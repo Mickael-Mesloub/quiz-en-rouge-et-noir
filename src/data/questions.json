@@ -2,30 +2,30 @@
   {
     "id": 1,
     "category": "Jeux vidéo",
-    "question": "Quel est le nom du plombier en salopette bleue et casquette rouge, mascotte de Nintendo ?",
-    "answer": "Mario",
+    "question": "De quelle couleur sont les yeux du fameux plombier en salopette bleue et casquette rouge, mascotte de Nintendo ?",
+    "answer": "Yeux bleus",
     "hint": "Frère de Luigi"
   },
   {
     "id": 2,
     "category": "Jeux vidéo",
-    "question": "Dans Pokémon, quel est le dresseur légendaire, toujours représenté avec une casquette rouge et une veste noire ?",
-    "answer": "Red",
-    "hint": "Rival de Blue"
+    "question": "Dans Pokémon, de quelle bourgade est originaire Sacha ?",
+    "answer": "Bourg-Palette",
+    "hint": "Première ville du jeu"
   },
   {
     "id": 3,
     "category": "Jeux vidéo",
-    "question": "Dans quel jeu incarne-t-on Dante, un chasseur de démons vêtu d’un long manteau rouge ?",
-    "answer": "Devil May Cry",
-    "hint": "Saga de Capcom"
+    "question": "En quelle année le jeu mobile Angry Birds est-il sorti ?",
+    "answer": "2009",
+    "hint": "Entre 2000 et 2010"
   },
   {
     "id": 4,
     "category": "Musique",
     "question": "Quel titre culte de Jeanne Mas contient déjà 'Rouge et noir' dans son nom ?",
     "answer": "En rouge et noir",
-    "hint": "1986"
+    "hint": "Littéralement le nom du quiz"
   },
   {
     "id": 5,
@@ -44,7 +44,7 @@
   {
     "id": 7,
     "category": "Cinéma / Séries / Anime / Animation",
-    "question": "Je suis le super-héros Marvel vêtu de rouge et noir, célèbre pour mon humour et mes répliques trash.",
+    "question": "Je suis le super-héros Marvel vêtu de rouge et noir, célèbre pour mon humour et mes répliques trash. Qui suis-je ?",
     "answer": "Deadpool",
     "hint": "Incarné par Ryan Reynolds"
   },
@@ -82,5 +82,89 @@
     "question": "Dans les jeux d’échecs, quelles pièces affrontent les blanches ?",
     "answer": "Les pièces noires",
     "hint": "Côté opposé aux blanches"
+  },
+  {
+    "id": 13,
+    "category": "Culture générale & Pop culture",
+    "question": "Dans les Tortues Ninja, quel est le nom de la tortue au bandana rouge ?",
+    "answer": "Raphaël",
+    "hint": "Même nom que l'auteur de la chanson Caravane"
+  },
+  {
+    "id": 14,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans la série Squid Game, quel numéro le personnage principal porte-t-il sur sa veste ?",
+    "answer": "N°456",
+    "hint": "C'est aussi le nombre total de joueurs"
+  },
+  {
+    "id": 15,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans le Disney Aladdin, quel est le nom du perroquet rouge de Jafar ?",
+    "answer": "Iago",
+    "hint": "Ça ressemble à un nom de modèle de voiture Toyota"
+  },
+  {
+    "id": 16,
+    "category": "Géographie et drapeaux",
+    "question": "À quel pays appartient le drapeau rouge avec un aigle noir à deux têtes en son centre ?",
+    "answer": "L'Albanie",
+    "hint": "Pays frontalier avec le Monténégro, le Kosovo (Serbie), la Macédoine et la Grèce"
+  },
+  {
+    "id": 17,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans le Disney La Belle au bois dormant, comment s'appelle l'antagoniste ?",
+    "answer": "Maléfique",
+    "hint": "Maîtresse absolue du mal"
+  },
+  {
+    "id": 18,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans les Barbapapa, combien y a-t-il de personnages noirs et quels sont leurs noms ?",
+    "answer": "2: Barbamama et Barbouille",
+    "hint": "La maman et l'artiste poilu"
+  },
+  {
+    "id": 19,
+    "category": "Musique",
+    "question": "Quel est le nom des membres du célèbre groupe de K-POP BLACKPINK ?",
+    "answer": "Jisoo, Jennie, Rosé et Lisa",
+    "hint": "Elles sont 4"
+  },
+  {
+    "id": 20,
+    "category": "Cinéma / Séries / Anime / Animation",
+    "question": "Dans Titeuf, quel est le nom du personnage portant un pull rouge ?",
+    "answer": "Hugo",
+    "hint": "Avec ses cheveux roux et son embonpoint"
+  },
+  {
+    "id": 21,
+    "category": "Géographie et drapeaux",
+    "question": "Combien y a-t-il de bandes rouges sur le drapeau des USA ?",
+    "answer": "7",
+    "hint": "13 bandes au total"
+  },
+  {
+    "id": 22,
+    "category": "Musique",
+    "question": "Quel groupe de nu-metal américain au logo rouge a parmi ses titres les plus connus: Duality, Psychosocial ou encore Before I forget ?",
+    "answer": "Slipknot",
+    "hint": "Nom signifiant Noeud coulant en français"
+  },
+  {
+    "id": 23,
+    "category": "Jeux vidéo",
+    "question": "De quelle couleur est la touche située après la touche rouge sur un manche de Guitar Hero ?",
+    "answer": "Jaune",
+    "hint": "3e touche, entre la rouge et la bleue"
+  },
+  {
+    "id": 24,
+    "category": "Géographie et drapeaux",
+    "question": "Parmi les pays partageant une frontière terrestre avec la France métropolitaine, combien ont du rouge sur leur drapeau ?",
+    "answer": "8 (tous)",
+    "hint": "Allemagne, Andorre, Belgique, Espagne, Italie, Luxembourg, Monaco, Suisse"
   }
 ]
