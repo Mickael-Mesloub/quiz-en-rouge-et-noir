@@ -1,8 +1,8 @@
-import { FaArrowRight } from "react-icons/fa"
-import { FiUser } from "react-icons/fi"
-import { twMerge } from "tailwind-merge"
-import { Button } from "@/shared/components/ui"
-import { Section } from "@/shared/layouts"
+import { FaArrowRight } from "react-icons/fa";
+import { FiUser } from "react-icons/fi";
+import { twMerge } from "tailwind-merge";
+import { Button } from "@/shared/components/ui";
+import { Section } from "@/shared/layouts";
 
 export default function Follow() {
   return (
@@ -22,7 +22,7 @@ export default function Follow() {
         </span>
       </FollowButton>
     </Section>
-  )
+  );
 }
 
 function UserProfile({
@@ -30,12 +30,12 @@ function UserProfile({
   className = "",
   ...restProps
 }: React.HTMLProps<HTMLDivElement>) {
-  const baseStyle = "flex flex-wrap items-center gap-2"
+  const baseStyle = "flex flex-wrap items-center gap-2";
   return (
     <div className={twMerge(baseStyle, className)} {...restProps}>
       {children}
     </div>
-  )
+  );
 }
 
 function Avatar() {
@@ -49,7 +49,7 @@ function Avatar() {
         />
       }
     </div>
-  )
+  );
 }
 
 function Text({
@@ -58,12 +58,12 @@ function Text({
   ...restProps
 }: React.HTMLProps<HTMLParagraphElement>) {
   const baseStyle =
-    "invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100"
+    "invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100";
   return (
     <p className={twMerge(baseStyle, className)} {...restProps}>
       {children}
     </p>
-  )
+  );
 }
 
 function FollowButton({
@@ -72,10 +72,10 @@ function FollowButton({
   ...restProps
 }: React.ComponentProps<typeof Button>) {
   const baseStyle =
-    "group/follow bg-accent-600 hover:bg-accent-500 transition-all active:translate-y-1"
+    "group/follow bg-accent-600 hover:bg-accent-500 transition-all active:translate-y-1";
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
     </Button>
-  )
+  );
 }

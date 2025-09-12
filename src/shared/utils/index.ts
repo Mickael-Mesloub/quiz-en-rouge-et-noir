@@ -1,1 +1,1 @@
-export { default as getUserPreference } from "./getUserPreference"
+export { default as getUserPreference } from "./getUserPreference";

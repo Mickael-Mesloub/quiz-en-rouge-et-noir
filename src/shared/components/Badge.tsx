@@ -1,14 +1,14 @@
-import { useState } from "react"
-import { FiBell } from "react-icons/fi"
-import { twMerge } from "tailwind-merge"
-import { Button } from "@/shared/components/ui"
-import { Section } from "@/shared/layouts"
+import { useState } from "react";
+import { FiBell } from "react-icons/fi";
+import { twMerge } from "tailwind-merge";
+import { Button } from "@/shared/components/ui";
+import { Section } from "@/shared/layouts";
 
 export default function Badge() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const handleClick = (_e: React.MouseEvent<HTMLButtonElement>) => {
-    setCount(count + 1)
-  }
+    setCount(count + 1);
+  };
   return (
     <Section className="grid place-content-center">
       <NotifyButton onClick={handleClick}>
@@ -20,7 +20,7 @@ export default function Badge() {
         )}
       </NotifyButton>
     </Section>
-  )
+  );
 }
 
 function NotifyButton({
@@ -29,12 +29,12 @@ function NotifyButton({
   ...restProps
 }: React.ComponentProps<typeof Button>) {
   const baseStyle =
-    "text-accent-500 relative aspect-square grid w-fit text-5xl shadow-lg shadow-black/10 rounded-full"
+    "text-accent-500 relative aspect-square grid w-fit text-5xl shadow-lg shadow-black/10 rounded-full";
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
     </Button>
-  )
+  );
 }
 
 function NotificationPill({
@@ -48,5 +48,5 @@ function NotificationPill({
     >
       {children}
     </div>
-  )
+  );
 }

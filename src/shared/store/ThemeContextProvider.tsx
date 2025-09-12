@@ -1,8 +1,8 @@
-import { PropsWithChildren, useEffect, useMemo } from "react"
-import { useSavedPreference } from "@/shared/hooks"
-import { ThemeContext } from "@/shared/store"
-import { Theme } from "@/shared/types"
-import { getUserPreference } from "@/shared/utils"
+import { PropsWithChildren, useEffect, useMemo } from "react";
+import { useSavedPreference } from "@/shared/hooks";
+import { ThemeContext } from "@/shared/store";
+import { Theme } from "@/shared/types";
+import { getUserPreference } from "@/shared/utils";
 
 /**
  * React Context API is used to handle the application's theme.
@@ -29,27 +29,27 @@ export default function ThemeProvider({ children }: PropsWithChildren) {
   const [theme, changeTheme] = useSavedPreference<Theme>(
     getUserPreference(),
     "__theme",
-  )
+  );
 
   // Additional side-effect (interacting directly with the DOM on theme change).
   useEffect(() => {
-    const htmlEl = document.querySelector("html")
-    if (!htmlEl) return
+    const htmlEl = document.querySelector("html");
+    if (!htmlEl) return;
     if (theme === "dark") {
-      htmlEl.classList.add("dark")
+      htmlEl.classList.add("dark");
     } else {
-      htmlEl.classList.remove("dark")
+      htmlEl.classList.remove("dark");
     }
-  }, [theme])
+  }, [theme]);
 
   const themeContextValue = useMemo(
     () => ({ theme, changeTheme }),
     [theme, changeTheme],
-  )
+  );
 
   return (
     <ThemeContext.Provider value={themeContextValue}>
       {children}
     </ThemeContext.Provider>
-  )
+  );
 }
