@@ -4,7 +4,7 @@ import { TheBasics } from "@/shared/components";
 export default function LandingPage() {
   return (
     <div className="p-8">
-      <Heading1>Quiz En rouge et noir ❤️🖤</Heading1>
+      <Heading1>Quiz - En rouge et noir ❤️🖤</Heading1>
       <TheBasics />
     </div>
   );

@@ -1,7 +1,7 @@
 import QuestionsList from "@/shared/components/Quizz/QuestionList";
 import { Heading2 } from "@/shared/components/ui";
 import questionsData from "@/data/questions.json";
-import { Question } from "@/@types";
+import { Question } from "@/shared/types";
 
 export default function Quizz() {
   const questions: Question[] = questionsData;
