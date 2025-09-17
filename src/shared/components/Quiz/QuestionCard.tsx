@@ -1,11 +1,12 @@
-import QuestionCardActions from "@/shared/components/Quizz/QuestionCardActions";
-import QuestionCardHeader from "@/shared/components/Quizz/QuestionCardHeader";
-import QuestionCardContent from "@/shared/components/Quizz/QuestionCardContent";
+import QuestionCardActions from "@/shared/components/Quiz/QuestionCardActions";
+import QuestionCardHeader from "@/shared/components/Quiz/QuestionCardHeader";
+import QuestionCardContent from "@/shared/components/Quiz/QuestionCardContent";
 import { HEADER_HEIGHT } from "@/shared/constants/layout";
-import useQuizz from "@/shared/hooks/useQuizz";
+
 import { Question } from "@/shared/types";
 import ShowAnswerModal from "@/shared/components/Modal/ShowAnswerModal";
 import useManageShowAnswerModal from "@/shared/hooks/useManageShowAnswerModal";
+import useQuiz from "@/shared/hooks/useQuiz";
 
 interface QuestionCardProps {
   questions: Question[];
@@ -20,8 +21,8 @@ export default function QuestionCard({ questions }: QuestionCardProps) {
     isLastQuestion,
     handleClickPrevQuestion,
     handleClickNextQuestion,
-    endQuizz,
-  } = useQuizz({ questions });
+    endQuiz,
+  } = useQuiz({ questions });
 
   const {
     isShowAnswerModalOpen,
@@ -56,7 +57,7 @@ export default function QuestionCard({ questions }: QuestionCardProps) {
         onConfirm={handleConfirmBtnAction}
         answer={questions[currentQuestionIndex].answer}
         isLastQuestion={isLastQuestion}
-        endQuizz={endQuizz}
+        endQuiz={endQuiz}
       />
     </div>
   );

@@ -2,11 +2,11 @@ import { Question } from "@/shared/types";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-type UseQuizzParams = {
+type UseQuizParams = {
   questions: Question[];
 };
 
-export default function useQuizz({ questions }: UseQuizzParams) {
+export default function useQuiz({ questions }: UseQuizParams) {
   const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const isFirstQuestion: boolean = currentQuestionIndex === 0;
@@ -24,7 +24,7 @@ export default function useQuizz({ questions }: UseQuizzParams) {
     setCurrentQuestionIndex((prev) => prev - 1);
   };
 
-  const endQuizz = () => {
+  const endQuiz = () => {
     navigate("/");
   };
 
@@ -34,6 +34,6 @@ export default function useQuizz({ questions }: UseQuizzParams) {
     isLastQuestion,
     handleClickNextQuestion,
     handleClickPrevQuestion,
-    endQuizz,
+    endQuiz,
   };
 }

@@ -10,7 +10,7 @@ export default function TheBasics() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/quizz");
+    navigate("/quiz");
   };
 
   return (
@@ -36,24 +36,22 @@ export default function TheBasics() {
           "À la fin du quiz, le joueur ayant le plus de points remporte la partie 🏆 Alors, prêts à relever le défi et ATOMISER vos adversaires ? 💥"
         }
       </TheBasicsText>
-      <StartQuizzBtn onClick={handleClick}>
-        {"Zé parti let's gooo"}
-      </StartQuizzBtn>
+      <StartQuizBtn onClick={handleClick}>{"Zé parti let's gooo"}</StartQuizBtn>
     </Section>
   );
 }
 
-function StartQuizzBtn({
+function StartQuizBtn({
   children,
   className = "",
   ...restProps
 }: React.ComponentProps<typeof Button>) {
   const baseStyle =
-    "text-2xl group/start-quizz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center";
+    "text-2xl group/start-quiz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center";
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
-      <span className="text-accent-50 group-hover/start-quizz:text-accent-600 mt-1 transition-all duration-500">
+      <span className="text-accent-50 group-hover/start-quiz:text-accent-600 mt-1 transition-all duration-500">
         <FaArrowRight
           focusable={false}
           aria-hidden={true}
