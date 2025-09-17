@@ -4,7 +4,9 @@ interface ShowAnswerModalProps {
   isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
+  endQuizz: () => void;
   answer: string;
+  isLastQuestion: boolean;
 }
 
 export default function ShowAnswerModal({
@@ -12,16 +14,24 @@ export default function ShowAnswerModal({
   onClose,
   onConfirm,
   answer,
+  isLastQuestion,
+  endQuizz,
 }: ShowAnswerModalProps) {
+  const confirmBtnTitle: string = isLastQuestion
+    ? "Terminer le quiz"
+    : "Question suivante";
+
+  const onConfirmAction = isLastQuestion ? endQuizz : onConfirm;
+
   return (
     <ConfirmationModal
       isOpen={isOpen}
       onClose={onClose}
-      onConfirm={onConfirm}
+      onConfirm={onConfirmAction}
       title="Réponse"
       content={answer}
       cancelBtnTitle="Fermer"
-      confirmBtnTitle="Question suivante"
+      confirmBtnTitle={confirmBtnTitle}
     />
   );
 }

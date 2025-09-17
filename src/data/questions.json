@@ -166,5 +166,131 @@
     "question": "Parmi les pays partageant une frontière terrestre avec la France métropolitaine, combien ont du rouge sur leur drapeau ?",
     "answer": "8 (tous: Allemagne, Andorre, Belgique, Espagne, Italie, Luxembourg, Monaco, Suisse)",
     "hint": "Allemagne, Andorre, Belgique, Espagne, Italie, Luxembourg, Monaco, Suisse"
+  },
+  {
+    "id": 25,
+    "category": "Nourriture & Boissons",
+    "question": "Je suis une épice rouge très utilisée en Espagne, surtout pour la paella. Qui suis-je ?",
+    "answer": "Le paprika",
+    "hint": "Rouge, doux ou fumé"
+  },
+  {
+    "id": 26,
+    "category": "Nourriture & Boissons",
+    "question": "Quel dessert français est fait de génoise, de chantilly et de cerises noires imbibées de kirsch ?",
+    "answer": "La forêt noire",
+    "hint": "Un gâteau d’Alsace"
+  },
+  {
+    "id": 27,
+    "category": "Nourriture & Boissons",
+    "question": "Quel vin rouge italien, produit en Toscane, est souvent servi avec une bouteille entourée de paille ?",
+    "answer": "Le Chianti",
+    "hint": "Silence of the Lambs"
+  },
+  {
+    "id": 28,
+    "category": "Nourriture & Boissons",
+    "question": "Quelle sauce rouge piquante thaïlandaise est aussi surnommée 'ketchup asiatique' ?",
+    "answer": "La sauce sriracha",
+    "hint": "Originaire de Si Racha"
+  },
+  {
+    "id": 29,
+    "category": "Nourriture & Boissons",
+    "question": "Quel fromage rouge à croûte en cire est vendu en petites boules qu’on pèle avant de croquer ?",
+    "answer": "Le Babybel",
+    "hint": "Snack d’enfance"
+  },
+  {
+    "id": 30,
+    "category": "Nourriture & Boissons",
+    "question": "Quelle boisson gazeuse rouge au goût cerise-vanille est culte aux États-Unis mais beaucoup moins connue en France ?",
+    "answer": "Le Dr Pepper",
+    "hint": "Pas un docteur de Grey’s Anatomy"
+  },
+  {
+    "id": 31,
+    "category": "Nourriture & Boissons",
+    "question": "Quel fruit rouge est souvent utilisé en jus dans les cocktails à base de rhum ou vodka ?",
+    "answer": "La canneberge",
+    "hint": "Cranberry en anglais"
+  },
+  {
+    "id": 32,
+    "category": "Nourriture & Boissons",
+    "question": "Quel plat coréen rouge et très épicé est fait de chou fermenté ?",
+    "answer": "Le kimchi",
+    "hint": "Accompagnement national en Corée"
+  },
+  {
+    "id": 33,
+    "category": "Nourriture & Boissons",
+    "question": "Quel dessert italien noir et blanc alterne couches de mascarpone et biscuits trempés au café ?",
+    "answer": "Le tiramisu",
+    "hint": "Traduit par 'tire-moi vers le haut'"
+  },
+  {
+    "id": 34,
+    "category": "Géographie et drapeaux",
+    "question": "Dans quel pays se trouve la fameuse 'Place Rouge' ?",
+    "answer": "Russie (Moscou)",
+    "hint": "Devant le Kremlin"
+  },
+  {
+    "id": 35,
+    "category": "Géographie et drapeaux",
+    "question": "Quel volcan italien, situé près de Naples, est connu pour sa lave rouge et avoir détruit Pompéi ?",
+    "answer": "Le Vésuve",
+    "hint": "Toujours actif"
+  },
+  {
+    "id": 36,
+    "category": "Géographie et drapeaux",
+    "question": "Quel pays est surnommé 'le pays du dragon rouge' ?",
+    "answer": "Le Pays de Galles",
+    "hint": "Son drapeau en est la preuve"
+  },
+  {
+    "id": 37,
+    "category": "Géographie et drapeaux",
+    "question": "Quelle ville japonaise est célèbre pour ses milliers de torii rouges au sanctuaire Fushimi Inari ?",
+    "answer": "Kyoto",
+    "hint": "Ancienne capitale"
+  },
+  {
+    "id": 38,
+    "category": "Géographie et drapeaux",
+    "question": "Quelle mer sépare l'Arique du Nord et le Moyen-Orient ?",
+    "answer": "La mer Rouge",
+    "hint": "C'est pas la mer noire"
+  },
+  {
+    "id": 39,
+    "category": "Géographie et drapeaux",
+    "question": "Quel quartier de Paris est célèbre pour son cabaret au moulin rouge ?",
+    "answer": "Pigalle / Montmartre (Moulin Rouge)",
+    "hint": "Le cabaret culte"
+  },
+  {
+    "id": 40,
+    "category": "Géographie et drapeaux",
+    "question": "Quel(s) autre(s) nom(s) porte le musée du palais impérial de Pékin ?",
+    "answer": "La Cité Pourpre interdite / Cité interdite",
+    "hint": "Ancien palais impérial"
+  },
+  {
+    "id": 41,
+    "category": "Géographie et drapeaux",
+    "question": "Dans quel pays se trouve le 'Temple noir' de Lhasa, lieu sacré du bouddhisme ?",
+    "answer": "Tibet (Chine)",
+    "hint": "Haut plateau asiatique"
+  },
+  {
+    "id": 42,
+    "category": "Culture générale & Pop culture",
+    "question": "Quel célèbre anti-héroïne DC Comics arborant un costume rouge et noir retrouve-t-on notamment dans Suicide Squad ?",
+    "answer": "Harley Quinn",
+    "hint": "Complice du Joker"
   }
 ]

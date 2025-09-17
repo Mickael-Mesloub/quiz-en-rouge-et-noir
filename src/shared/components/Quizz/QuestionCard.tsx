@@ -20,6 +20,7 @@ export default function QuestionCard({ questions }: QuestionCardProps) {
     isLastQuestion,
     handleClickPrevQuestion,
     handleClickNextQuestion,
+    endQuizz,
   } = useQuizz({ questions });
 
   const {
@@ -54,6 +55,8 @@ export default function QuestionCard({ questions }: QuestionCardProps) {
         onClose={closeConfirmationModal}
         onConfirm={handleConfirmBtnAction}
         answer={questions[currentQuestionIndex].answer}
+        isLastQuestion={isLastQuestion}
+        endQuizz={endQuizz}
       />
     </div>
   );
