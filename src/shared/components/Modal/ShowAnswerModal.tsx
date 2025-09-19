@@ -2,11 +2,11 @@ import ConfirmationModal from "@/shared/components/Modal/ConfirmationModal";
 
 interface ShowAnswerModalProps {
   isOpen: boolean;
+  answer: string;
+  isQuizFinished: boolean;
   onClose: () => void;
   onConfirm: () => void;
   endQuiz: () => void;
-  answer: string;
-  isLastQuestion: boolean;
 }
 
 export default function ShowAnswerModal({
@@ -14,14 +14,14 @@ export default function ShowAnswerModal({
   onClose,
   onConfirm,
   answer,
-  isLastQuestion,
+  isQuizFinished,
   endQuiz,
 }: ShowAnswerModalProps) {
-  const confirmBtnTitle: string = isLastQuestion
+  const confirmBtnTitle: string = isQuizFinished
     ? "Terminer le quiz"
     : "Question suivante";
 
-  const onConfirmAction = isLastQuestion ? endQuiz : onConfirm;
+  const onConfirmAction = isQuizFinished ? endQuiz : onConfirm;
 
   return (
     <ConfirmationModal

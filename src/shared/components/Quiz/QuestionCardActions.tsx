@@ -1,29 +1,27 @@
 import { Button } from "@/shared/components/ui";
+import { useQuizState } from "@/shared/store";
+import { isFirstQuestion } from "@/shared/utils";
 import { CircleArrowLeft, CircleArrowRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 interface QuestionCardActionsProps {
-  handleClickNextQuestion: () => void;
-  handleClickPrevQuestion: () => void;
   openModal: () => void;
-  isFirstQuestion: boolean;
-  isLastQuestion: boolean;
+  isQuizFinished: boolean;
 }
 
 export default function QuestionCardActions({
-  handleClickNextQuestion,
-  handleClickPrevQuestion,
-  isFirstQuestion,
-  isLastQuestion,
   openModal,
+  isQuizFinished,
 }: QuestionCardActionsProps) {
+  const { currentQuestionIndex, prevQuestion, nextQuestion } = useQuizState();
+
   return (
     <div className="relative flex w-full flex-1">
-      {!isFirstQuestion && (
+      {!isFirstQuestion({ currentQuestionIndex }) && (
         <SwitchQuestionBtn
           className="bottom-8 left-8 hover:-translate-x-1"
-          disabled={isFirstQuestion}
-          onClick={handleClickPrevQuestion}
+          disabled={isFirstQuestion({ currentQuestionIndex })}
+          onClick={prevQuestion}
         >
           <CircleArrowLeft size={36} />
         </SwitchQuestionBtn>
@@ -36,11 +34,11 @@ export default function QuestionCardActions({
         Afficher la réponse
       </ShowAnswerBtn>
 
-      {!isLastQuestion && (
+      {!isQuizFinished && (
         <SwitchQuestionBtn
           className="right-8 bottom-8 hover:translate-x-1"
-          disabled={isLastQuestion}
-          onClick={handleClickNextQuestion}
+          disabled={isQuizFinished}
+          onClick={nextQuestion}
         >
           <CircleArrowRight size={36} />
         </SwitchQuestionBtn>

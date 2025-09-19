@@ -1,5 +1,6 @@
+import { useQuizState } from "@/shared/store";
 import { Question } from "@/shared/types";
-import { useState } from "react";
+import { isFirstQuestion, isLastQuestion } from "@/shared/utils";
 import { useNavigate } from "react-router-dom";
 
 type UseQuizParams = {
@@ -8,30 +9,33 @@ type UseQuizParams = {
 
 export default function useQuiz({ questions }: UseQuizParams) {
   const navigate = useNavigate();
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const isFirstQuestion: boolean = currentQuestionIndex === 0;
-  const isLastQuestion: boolean = currentQuestionIndex === questions.length - 1;
+  const { currentQuestionIndex, nextQuestion, prevQuestion } = useQuizState();
+  const isQuizFinished: boolean = isLastQuestion({
+    currentQuestionIndex,
+    questions,
+  });
 
   const handleClickNextQuestion = () => {
-    if (isLastQuestion) return;
+    if (isQuizFinished) return;
 
-    setCurrentQuestionIndex((prev) => prev + 1);
+    nextQuestion();
   };
 
   const handleClickPrevQuestion = () => {
-    if (isFirstQuestion) return;
+    if (isFirstQuestion({ currentQuestionIndex })) return;
 
-    setCurrentQuestionIndex((prev) => prev - 1);
+    prevQuestion();
   };
 
   const endQuiz = () => {
+    // TODO: show result screen instead of redirection
+    // TODO: add quiz state reset when endQuiz function is triggered
     navigate("/");
   };
 
   return {
     currentQuestionIndex,
-    isFirstQuestion,
-    isLastQuestion,
+    isQuizFinished,
     handleClickNextQuestion,
     handleClickPrevQuestion,
     endQuiz,
