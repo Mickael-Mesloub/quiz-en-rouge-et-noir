@@ -10,50 +10,48 @@ export default function TheBasics() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/quizz");
+    navigate("/quiz");
   };
 
   return (
     <Section>
       <Heading2>Comment on joue ?</Heading2>
-      <Text>
+      <TheBasicsText>
         {
           "Vous allez devoir répondre à une série de questions sur des thèmes variés (Pop culture/culture générale, musique, cinéma...)"
         }
-      </Text>
-      <Text>
+      </TheBasicsText>
+      <TheBasicsText>
         {
           "Pour chaque question, vous disposerez de 15s pour écrire votre réponse. Soyez rapides 😉 !"
         }
-      </Text>
-      <Text>
+      </TheBasicsText>
+      <TheBasicsText>
         {
           "Après chaque question, on regarde si vous avez la bonne réponse et on attribue les points. Chaque bonne réponse rapporte +1 point."
         }
-      </Text>
-      <Text>
+      </TheBasicsText>
+      <TheBasicsText>
         {
           "À la fin du quiz, le joueur ayant le plus de points remporte la partie 🏆 Alors, prêts à relever le défi et ATOMISER vos adversaires ? 💥"
         }
-      </Text>
-      <StartQuizzBtn onClick={handleClick}>
-        {"Zé parti let's gooo"}
-      </StartQuizzBtn>
+      </TheBasicsText>
+      <StartQuizBtn onClick={handleClick}>{"Zé parti let's gooo"}</StartQuizBtn>
     </Section>
   );
 }
 
-function StartQuizzBtn({
+function StartQuizBtn({
   children,
   className = "",
   ...restProps
 }: React.ComponentProps<typeof Button>) {
   const baseStyle =
-    "group/start-quizz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center";
+    "text-2xl group/start-quiz p-4 transition-all duration-500 ease w-full rounded-full hover:bg-accent-50 hover:text-accent-600 border-2 justify-center";
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
-      <span className="text-accent-50 group-hover/start-quizz:text-accent-600 mt-1 transition-all duration-500">
+      <span className="text-accent-50 group-hover/start-quiz:text-accent-600 mt-1 transition-all duration-500">
         <FaArrowRight
           focusable={false}
           aria-hidden={true}
@@ -61,5 +59,19 @@ function StartQuizzBtn({
         />
       </span>
     </Button>
+  );
+}
+
+function TheBasicsText({
+  children,
+  className = "",
+  ...restProps
+}: React.ComponentProps<typeof Text>) {
+  const baseStyle = "text-2xl";
+
+  return (
+    <Text className={twMerge(baseStyle, className)} {...restProps}>
+      {children}
+    </Text>
   );
 }

@@ -5,7 +5,7 @@ export default function Heading2({
   className = "",
   ...restProps
 }: React.HTMLProps<HTMLHeadingElement>) {
-  const baseStyle = "text-xl font-bold";
+  const baseStyle = "text-3xl font-bold";
   return (
     <h2 className={twMerge(baseStyle, className)} {...restProps}>
       {children}

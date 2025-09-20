@@ -1,2 +1,8 @@
-export { ThemeContext } from "./ThemeContext";
-export { default as ThemeContextProvider } from "./ThemeContextProvider";
+export { ThemeContext } from "./theme/ThemeContext";
+export { default as ThemeContextProvider } from "./theme/ThemeContextProvider";
+export {
+  useCurrentQuestionIndex,
+  useNextQuestion,
+  usePrevQuestion,
+  useQuizState,
+} from "./quiz/quizStore";
