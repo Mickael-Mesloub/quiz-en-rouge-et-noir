@@ -8,7 +8,7 @@ import { Spinner } from "@/ui/components/Loader";
 export default function PageLayout() {
   return (
     <ErrorBoundary
-      fallbackRender={(props) => <FallbackErrorBoundary fullPage {...props} />}
+      fallbackRender={(props) => <FallbackErrorBoundary {...props} />}
     >
       <PageWrapper>
         <Header />

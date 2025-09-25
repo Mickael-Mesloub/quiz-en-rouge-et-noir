@@ -13,7 +13,7 @@ export default function QuizRules() {
   };
 
   return (
-    <Article className="bg-primary-400 text-secondary-900 max-w-[33%] gap-8 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl">
+    <Article className="bg-primary-400 text-secondary-900 w-fit max-w-[33%] gap-8 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl">
       <H2>Comment on joue ?</H2>
       <Text>
         {
