@@ -2,7 +2,6 @@ import { create } from "zustand";
 
 interface QuizState {
   currentQuestionIndex: number;
-  prevQuestion: () => void;
   nextQuestion: () => void;
 }
 
@@ -12,9 +11,6 @@ interface QuizState {
 
 const useQuizStore = create<QuizState>()((set) => ({
   currentQuestionIndex: 0,
-  prevQuestion: () => {
-    set((state) => ({ currentQuestionIndex: state.currentQuestionIndex - 1 }));
-  },
   nextQuestion: () => {
     set((state) => ({ currentQuestionIndex: state.currentQuestionIndex + 1 }));
   },
@@ -23,7 +19,5 @@ const useQuizStore = create<QuizState>()((set) => ({
 export const useQuizState = () => useQuizStore((state) => state);
 export const useCurrentQuestionIndex = () =>
   useQuizStore((state) => state.currentQuestionIndex);
-export const usePrevQuestion = () =>
-  useQuizStore((state) => state.prevQuestion);
 export const useNextQuestion = () =>
   useQuizStore((state) => state.nextQuestion);

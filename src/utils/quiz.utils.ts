@@ -1,18 +1,9 @@
 import { Question } from "@/types";
 
-type IsFirstQuestionFnArgs = {
+type IsLastQuestionFnArgs = {
   currentQuestionIndex: number;
-};
-
-type IsLastQuestionFnArgs = IsFirstQuestionFnArgs & {
   questions: Question[];
 };
-
-export function isFirstQuestion({
-  currentQuestionIndex,
-}: IsFirstQuestionFnArgs): boolean {
-  return currentQuestionIndex === 0;
-}
 
 export function isLastQuestion({
   currentQuestionIndex,

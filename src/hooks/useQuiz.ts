@@ -1,6 +1,6 @@
 import { useQuizState } from "@/store";
 import { Question } from "@/types";
-import { isFirstQuestion, isLastQuestion } from "@/utils";
+import { isLastQuestion } from "@/utils";
 import { useNavigate } from "react-router-dom";
 
 type UseQuizParams = {
@@ -9,7 +9,7 @@ type UseQuizParams = {
 
 export default function useQuiz({ questions }: UseQuizParams) {
   const navigate = useNavigate();
-  const { currentQuestionIndex, nextQuestion, prevQuestion } = useQuizState();
+  const { currentQuestionIndex, nextQuestion } = useQuizState();
   const isQuizFinished: boolean = isLastQuestion({
     currentQuestionIndex,
     questions,
@@ -19,12 +19,6 @@ export default function useQuiz({ questions }: UseQuizParams) {
     if (isQuizFinished) return;
 
     nextQuestion();
-  };
-
-  const handleClickPrevQuestion = () => {
-    if (isFirstQuestion({ currentQuestionIndex })) return;
-
-    prevQuestion();
   };
 
   const endQuiz = () => {
@@ -37,7 +31,6 @@ export default function useQuiz({ questions }: UseQuizParams) {
     currentQuestionIndex,
     isQuizFinished,
     handleClickNextQuestion,
-    handleClickPrevQuestion,
     endQuiz,
   };
 }

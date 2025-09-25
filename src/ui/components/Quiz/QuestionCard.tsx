@@ -37,10 +37,7 @@ export default function QuestionCard({ questions }: QuestionCardProps) {
         numberOfQuestions={questions.length}
       />
       <QuestionCardContent question={questions[currentQuestionIndex]} />
-      <QuestionCardActions
-        openModal={openConfirmationModal}
-        isQuizFinished={isQuizFinished}
-      />
+      <QuestionCardActions openModal={openConfirmationModal} />
       <ShowAnswerModal
         isOpen={isShowAnswerModalOpen}
         onClose={closeConfirmationModal}
