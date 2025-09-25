@@ -3,6 +3,5 @@ export { default as ThemeContextProvider } from "./theme/ThemeContextProvider";
 export {
   useCurrentQuestionIndex,
   useNextQuestion,
-  usePrevQuestion,
   useQuizState,
 } from "./quiz/quizStore";
