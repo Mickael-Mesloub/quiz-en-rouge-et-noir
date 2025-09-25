@@ -1,15 +1,12 @@
-import TheBasics from "@/ui/components/TheBasics";
-import { HTMLAttributes } from "react";
+import { Section } from "@/ui/components/Layout";
+import { QuizRules } from "@/ui/components/Quiz";
+import { H1 } from "@/ui/components/Typography";
 
 export default function LandingPage() {
   return (
-    <div className="p-8">
-      <Heading1>Quiz - En rouge et noir ❤️🖤</Heading1>
-      <TheBasics />
-    </div>
+    <Section className="h-full gap-16 p-8">
+      <H1>Quiz - En rouge et noir ❤️🖤</H1>
+      <QuizRules />
+    </Section>
   );
-}
-
-function Heading1({ children }: HTMLAttributes<HTMLHeadingElement>) {
-  return <h1 className="text-center text-3xl font-bold">{children}</h1>;
 }

@@ -1,57 +1,29 @@
-import { ComponentProps, HTMLAttributes, PropsWithChildren } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/ui/components/Button";
+import { H1, H2, Text } from "@/ui/components/Typography";
+import { Main, Section } from "@/ui/components/Layout";
 
 export default function NotFoundPage() {
   const navigate = useNavigate();
   const handleClick = (_e: React.MouseEvent<HTMLButtonElement>) => {
     navigate("/");
   };
+
   return (
-    <Main>
-      <Heading1>Oops!</Heading1>
+    <Main className="flex flex-col items-center justify-center gap-8">
+      <H1>Oups !</H1>
       <Section>
-        <H2>Something is going on in the Universe...</H2>
-        <Text>Looks like you probably got lost.</Text>
+        <H2>Vous cherchez quelque chose ?</H2>
+        <Text>
+          Vous avez dû vous tromper de chemin, il n&apos;y a rien à voir ici 👀
+        </Text>
       </Section>
-      <BackToHomeBtn onClick={handleClick}>
-        Take me back to base 🚀
-      </BackToHomeBtn>
+      <Button
+        className="hover:bg-primary-100 hover:text-accent-600 w-fit border-2"
+        onClick={handleClick}
+      >
+        Rentrer à la maison 🏠
+      </Button>
     </Main>
-  );
-}
-
-function Main({ children }: PropsWithChildren) {
-  return (
-    <main className="grid min-h-dvh place-content-center gap-8 bg-slate-800 text-slate-200">
-      {children}
-    </main>
-  );
-}
-
-function Heading1({ children }: HTMLAttributes<HTMLHeadingElement>) {
-  return <h1 className="text-4xl">{children}</h1>;
-}
-
-function Section({ children }: PropsWithChildren) {
-  return <section className="">{children}</section>;
-}
-
-function H2({ children }: HTMLAttributes<HTMLHeadingElement>) {
-  return <h2 className="text-2xl">{children}</h2>;
-}
-
-function Text({ children }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className="my-2 text-lg">{children}</p>;
-}
-
-function BackToHomeBtn({
-  children,
-  ...restProps
-}: ComponentProps<typeof Button>) {
-  return (
-    <Button className="w-fit max-w-none text-lg" {...restProps}>
-      {children}
-    </Button>
   );
 }

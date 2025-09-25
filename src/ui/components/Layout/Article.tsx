@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-export default function Section({
+export default function Article({
   children,
   className = "",
   ...restProps
@@ -8,8 +8,8 @@ export default function Section({
   const baseStyle = "flex flex-col items-center p-4";
 
   return (
-    <section className={twMerge(baseStyle, className)} {...restProps}>
+    <article className={twMerge(baseStyle, className)} {...restProps}>
       {children}
-    </section>
+    </article>
   );
 }
