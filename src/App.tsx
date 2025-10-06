@@ -1,7 +1,7 @@
 import { ErrorBoundary } from "react-error-boundary";
-import { FallbackErrorBoundary } from "@/shared/components/error";
-import { AppRoutes } from "@/shared/routes";
-import { ThemeContextProvider } from "@/shared/store";
+import { FallbackErrorBoundary } from "@/ui/components/Error";
+import { AppRoutes } from "@/routes";
+import { ThemeContextProvider } from "@/store";
 import "./App.css";
 
 export default function App() {
