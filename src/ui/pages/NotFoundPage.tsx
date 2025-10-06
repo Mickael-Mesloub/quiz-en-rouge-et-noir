@@ -14,16 +14,11 @@ export default function NotFoundPage() {
       <H1>Oups !</H1>
       <Section>
         <H2>Vous cherchez quelque chose ?</H2>
-        <Text>
+        <Text className="text-muted">
           Vous avez dû vous tromper de chemin, il n&apos;y a rien à voir ici 👀
         </Text>
       </Section>
-      <Button
-        className="hover:bg-primary-100 hover:text-accent-600 w-fit border-2"
-        onClick={handleClick}
-      >
-        Rentrer à la maison 🏠
-      </Button>
+      <Button onClick={handleClick}>Rentrer à la maison 🏠</Button>
     </Main>
   );
 }

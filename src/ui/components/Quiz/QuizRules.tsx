@@ -13,28 +13,28 @@ export default function QuizRules() {
   };
 
   return (
-    <Article className="bg-primary-400 text-secondary-900 w-fit max-w-[33%] gap-8 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl">
+    <Article className="bg-surface-bg w-fit max-w-[33%] gap-8 rounded-2xl p-8 shadow-md hover:shadow-lg">
       <H2>Comment on joue ?</H2>
-      <Text>
+      <RuleText>
         {
           "Vous allez devoir répondre à une série de questions sur des thèmes variés (Pop culture/culture générale, musique, cinéma...)"
         }
-      </Text>
-      <Text>
+      </RuleText>
+      <RuleText>
         {
           "Pour chaque question, vous disposerez de 15s pour écrire votre réponse. Soyez rapides 😉 !"
         }
-      </Text>
-      <Text>
+      </RuleText>
+      <RuleText>
         {
           "Après chaque question, on regarde si vous avez la bonne réponse et on attribue les points. Chaque bonne réponse rapporte +1 point 💪"
         }
-      </Text>
-      <Text>
+      </RuleText>
+      <RuleText>
         {
           "À la fin du quiz, le joueur ayant le plus de points remporte la partie 🏆 Alors, prêts à relever le défi et ATOMISER vos adversaires ? 💥"
         }
-      </Text>
+      </RuleText>
       <StartQuizBtn onClick={handleClick}>{"Zé parti let's gooo"}</StartQuizBtn>
     </Article>
   );
@@ -45,12 +45,11 @@ function StartQuizBtn({
   className = "",
   ...restProps
 }: React.ComponentProps<typeof Button>) {
-  const baseStyle =
-    "group/start-quiz transition-all duration-300 ease w-full rounded-full hover:bg-primary-100 hover:text-accent-500 border-2 justify-center";
+  const baseStyle = "w-full rounded-full hover:bg-transparent justify-center";
   return (
     <Button className={twMerge(baseStyle, className)} {...restProps}>
       {children}
-      <span className="text-secondary-900 group-hover/start-quiz:text-accent-500 mt-1 transition-all duration-300">
+      <span className="mt-1">
         <FaArrowRight
           focusable={false}
           aria-hidden={true}
@@ -58,5 +57,19 @@ function StartQuizBtn({
         />
       </span>
     </Button>
+  );
+}
+
+function RuleText({
+  children,
+  className = "",
+  ...restProps
+}: React.ComponentProps<typeof Text>) {
+  const baseStyle = "text-muted";
+
+  return (
+    <Text className={twMerge(baseStyle, className)} {...restProps}>
+      {children}
+    </Text>
   );
 }

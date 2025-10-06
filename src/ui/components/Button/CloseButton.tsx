@@ -5,7 +5,7 @@ interface CloseButtonProps {
 export default function CloseButton({ onClick }: CloseButtonProps) {
   return (
     <button
-      className="text-secondary-900 hover:text-accent-500 absolute top-8 right-4 cursor-pointer"
+      className="text-main-text hover:text-error absolute top-10 right-4 cursor-pointer"
       onClick={onClick}
     >
       <svg

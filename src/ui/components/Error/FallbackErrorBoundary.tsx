@@ -1,5 +1,6 @@
 import { Button } from "@/ui/components/Button";
 import { FallbackProps } from "react-error-boundary";
+import { FaArrowRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 
 type FallbackErrorBoundaryProps = FallbackProps & {
@@ -40,17 +41,13 @@ export default function FallbackError({
             Une erreur est survenue
           </Heading1>
           <ErrorMessage>{errorMessage}</ErrorMessage>
-          <Image />
         </LeftContent>
         <RightContent>
           <Text>
             {message} <br />
             Si l&apos;erreur persiste, contacter votre administrateur.
           </Text>
-          <RetryButton onClick={handleClick}>
-            Réessayer
-            <ArrowRightIcon />
-          </RetryButton>
+          <RetryButton onClick={handleClick} />
         </RightContent>
       </Container>
     </Wrapper>
@@ -112,7 +109,7 @@ function BaseContent({
 function Header(props: React.HTMLAttributes<HTMLSpanElement>) {
   return (
     <span
-      className="tracking-[.25em]text-accent-50 text-sm uppercase md:tracking-[.5em]"
+      className="tracking-[.25em]text-error text-sm uppercase md:tracking-[.5em]"
       {...props}
     />
   );
@@ -121,22 +118,9 @@ function Header(props: React.HTMLAttributes<HTMLSpanElement>) {
 function Heading1(props: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h1
-      className="font-blacktext-accent-50 font-sans text-2xl lg:text-4xl"
+      className="font-blacktext-error font-sans text-2xl lg:text-4xl"
       {...props}
     />
-  );
-}
-
-function Image(props: React.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div className="max-w-[200px] md:max-w-[350px]" {...props}>
-      <img
-        src="img/not-found.webp"
-        alt="not found"
-        width="770"
-        className="object-contain hue-rotate-[-1deg] saturate-[1.05]"
-      />
-    </div>
   );
 }
 
@@ -148,35 +132,20 @@ function Text({
   className,
   ...restProps
 }: React.HTMLAttributes<HTMLPreElement>) {
-  return (
-    <pre className={twMerge("text-accent-50", className)} {...restProps} />
-  );
-}
-
-function ArrowRightIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="size-4"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-      />
-    </svg>
-  );
+  return <pre className={twMerge("text-error", className)} {...restProps} />;
 }
 
 function RetryButton(props: React.ComponentProps<typeof Button>) {
   return (
-    <Button
-      className="hover:bg-accent-50 hover:text-accent-500 w-fit bg-transparent transition-all duration-300"
-      {...props}
-    />
+    <Button className="bg-error hover:text-error" {...props}>
+      Réessayer
+      <span className="mt-1">
+        <FaArrowRight
+          focusable={false}
+          aria-hidden={true}
+          className="text-inherit"
+        />
+      </span>
+    </Button>
   );
 }

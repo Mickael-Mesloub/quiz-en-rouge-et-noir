@@ -5,8 +5,7 @@ export default function H2({
   className = "",
   ...restProps
 }: React.HTMLProps<HTMLHeadingElement>) {
-  const baseStyle =
-    "max-[560px]:text-2xl text-3xl font-bold transition-all duration-300";
+  const baseStyle = "max-[560px]:text-2xl text-3xl font-bold";
   return (
     <h2 className={twMerge(baseStyle, className)} {...restProps}>
       {children}

@@ -5,7 +5,7 @@ export default function Text({
   className = "",
   ...restProps
 }: React.HTMLProps<HTMLParagraphElement>) {
-  const baseStyle = "max-[560px]:text-base text-xl transition-all duration-300";
+  const baseStyle = "max-[560px]:text-base text-xl";
   return (
     <p className={twMerge(baseStyle, className)} {...restProps}>
       {children}
